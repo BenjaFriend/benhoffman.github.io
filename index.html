@@ -3,19 +3,9 @@ layout: home
 background: '/media/ue5_b.jpg'
 ---
 
-<div id="about">
-  <p>
-    Hey! I'm Ben Hoffman, Engine Programmer at Epic Games. I have 
-    always had a passion for video games, so I decided to make a 
-    career out of them. I am constantly learning and I love to 
-    take on new challenges! 
-  </p>
-</div> <!-- End about -->
-
-
 <!-- Container Div that will have dynamically generated projects in it -->
 <div id="projects">
-  <h1>Professional Experience</h1>
+  <h1>What I do</h1>
   {% for project in site.data.projects %}
     <div id="projectInfo">
       <h2 id="projectTitle">{{ project.title }} {% if project.tools %}<span id="tools">({{ project.tools}})</span>{% endif %}</h2>
