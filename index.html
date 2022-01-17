@@ -10,8 +10,9 @@ background: '/media/ue5_b.jpg'
     <div id="projectInfo">
       <h2 id="projectTitle">{{ project.title }} {% if project.tools %}<span id="tools">({{ project.tools}})</span>{% endif %}</h2>
 
-      <img id="projectBanner" src={{ project.image }} />
-
+      <div id="bannerContainer">
+        <img id="projectBanner" src={{ project.image }} />
+      </div>
       <p>{{ project.description }}</p>
 
       <div id="projectLinks" style="text-align: center;">

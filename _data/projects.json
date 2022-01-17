@@ -22,10 +22,6 @@
 	"description": "Aurum Kings started out as a small game jam idea that has bloomed into a polished project that I released on Steam. I was the only one to work on this project doing everything from gameplay programming to level design and modeling in Blender. For the music, my friend Rowan Waring did several compositions for each level.",
 	"links": [
 		{
-			"name": "Dev Blog",
-			"value": "https://bullhorngames.com"
-		},
-		{
 			"name": "Steam Page",
 			"value": "https://store.steampowered.com/app/848460/Aurum_Kings/"
 		}
@@ -41,10 +37,6 @@
 			{
 				"name": "Workinman Website",
 				"value": "https://workinman.com/"
-			},
-			{
-				"name": "Play the Game",
-				"value": "http://www.nick.com/spongebob-squarepants/games/spongebobs-next-big-adventure/"
 			}
 		]
 	}

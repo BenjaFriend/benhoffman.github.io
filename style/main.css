@@ -101,6 +101,7 @@ div.borderXwidth a:hover:before, div.borderXwidth a:hover:after {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 /* Link styles */
