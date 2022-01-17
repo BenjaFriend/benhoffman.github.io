@@ -3,32 +3,42 @@ layout: home
 background: '/media/ue5_b.jpg'
 ---
 
-<!-- Container Div that will have dynamically generated projects in it -->
 <div id="projects">
-  <h1>What I do</h1>
-  {% for project in site.data.projects %}
-    <div id="projectInfo">
-      <h2 id="projectTitle">{{ project.title }} {% if project.tools %}<span id="tools">({{ project.tools}})</span>{% endif %}</h2>
+<h1>What I Do</h1>
 
-      <div id="bannerContainer">
-        <img id="projectBanner" src={{ project.image }} />
-      </div>
-      <p>{{ project.description }}</p>
+<!-- Home Post List -->
+{% for post in site.posts limit : 5 %}
+  <!-- Only show things from the workExperience subfolder in _posts -->
+  {% if post.path contains 'workExperience' %}
 
-      <div id="projectLinks" style="text-align: center;">
-        {% if project.links %}
-        <p>
-            {% for link in project.links %}
-              <a href={{ link.value }} target="_blank">{{ link.name }}</a>{% if link != project.links.last %}  |  {% endif %}
-            {% endfor %}
-        {% endif %}
-        </p>
-      </div> <!-- End project links -->
+  <article class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+      <h2 class="post-title">{{ post.title }}</h2>
+      {% if post.subtitle %}
+      <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+      {% endif %}
 
-    </div> <!-- End Project Info -->
-  {% endfor %}
+      <!-- Show the image related to this position if there is one -->
+      {% if post.banner-image %}
+        <div id="bannerContainer">
+          <img id="projectBanner" src={{ post.banner-image }} />
+        </div>
+      {% endif %}
 
-</div> <!-- End projects -->
+      <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+    </a>
+    <!-- Show start/end dates of this position -->
+    <p class="post-meta">
+      {{ post.start-date | date: '%B %d, %Y' }} to {{ post.end-date }}      
+    </p>
+    <p></p>
+  </article>
+<hr>
+
+  {% endif %}
+{% endfor %}
+
+</div>
 
 <div id="otherInfo">
 
