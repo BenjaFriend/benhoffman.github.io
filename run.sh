@@ -1,2 +1,2 @@
 #/bin/bash
-bundle exec jekyll serve --host=0.0.0.0 --watch --incremental --force_polling
+bundle exec jekyll serve --host=0.0.0.0 --watch --incremental --force_polling --watch

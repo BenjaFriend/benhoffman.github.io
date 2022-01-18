@@ -3,8 +3,9 @@ layout: home
 background: '/media/ue5_b.jpg'
 ---
 
+<h1>Hey, I'm Ben!</h1>
+
 <div id="projects">
-<h1>What I Do</h1>
 
 <!-- Home Post List -->
 {% for post in site.posts limit : 5 %}
@@ -13,9 +14,9 @@ background: '/media/ue5_b.jpg'
 
   <article class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-      <h2 class="post-title">{{ post.title }}</h2>
+      <h3 class="post-title">{{ post.title }}</h2>
       {% if post.subtitle %}
-      <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+      <h4 class="post-subtitle">{{ post.subtitle }}</h3>
       {% endif %}
 
       <!-- Show the image related to this position if there is one -->
@@ -25,11 +26,11 @@ background: '/media/ue5_b.jpg'
         </div>
       {% endif %}
 
-      <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+      <p>{{ post.excerpt | strip_html | truncatewords: 35 }}</p>
     </a>
     <!-- Show start/end dates of this position -->
     <p class="post-meta">
-      {{ post.start-date | date: '%B %d, %Y' }} to {{ post.end-date }}      
+      {{ post.start-date | date: '%B %d, %Y' }} to {{ post.end-date | date: '%B %d, %Y'}}      
     </p>
     <p></p>
   </article>
