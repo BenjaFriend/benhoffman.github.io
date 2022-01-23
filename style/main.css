@@ -87,6 +87,10 @@ div.borderXwidth a:hover:before, div.borderXwidth a:hover:after {
     width: 100%;
 }
 
+#titles {
+  text-align: center;
+}
+
 /* Main Content */
 #mainContent {
   width: 800px;

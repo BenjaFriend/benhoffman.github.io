@@ -2,15 +2,8 @@
 layout: home
 background: '/media/ue5_b.jpg'
 ---
-<h1>Hey, I'm Ben!</h1>
-<!-- TODO: Add a picture of me -->
-<!-- TODO: Description of myself and what I like to do -->
-
-<p>Foo bar blahg who asd laeta Foo bar blahg who asd laeta Foo bar blahg who asd laeta Foo bar blahg who asd laeta Foo bar blahg 
-  who asd laeta Foo bar blahg who asd laeta Foo bar blahg who asd laeta</p>
 
 <div id="workExperience">
-
 <!-- Home Post List -->
 {% for post in site.posts %}
   <!-- Only show things from the workExperience subfolder in _posts -->
@@ -18,9 +11,9 @@ background: '/media/ue5_b.jpg'
 
   <article class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-      <h3 class="post-title">{{ post.title }}</h2>
+      <h4 class="post-title">{{ post.title }}</h4>
       {% if post.subtitle %}
-      <h4 class="post-subtitle">{{ post.subtitle }}</h3>
+      <h5 class="post-subtitle">{{ post.subtitle }}</h5>
       {% endif %}
 
       <!-- Show the image related to this position if there is one -->
@@ -48,7 +41,7 @@ background: '/media/ue5_b.jpg'
 <!-- TODO: Make my work experience in little tiles that react when you hover over them -->
 
 <div id="PersonalProjects">
-<h2>Personal Projects</h2>
+<h2 id="titles">some fun side projects</h2>
   <!-- Home Post List -->
   {% for post in site.posts %}
     <!-- Only show things from the PersonalProjects subfolder in _posts -->
