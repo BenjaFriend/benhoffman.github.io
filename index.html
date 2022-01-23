@@ -4,10 +4,13 @@ background: '/media/ue5_b.jpg'
 ---
 
 <h1>Hey, I'm Ben!</h1>
+<!-- TODO: Add a picture of me -->
+<!-- TODO: Description of myself and what I like to do -->
+
 <p>Foo bar blahg who asd laeta Foo bar blahg who asd laeta Foo bar blahg who asd laeta Foo bar blahg who asd laeta Foo bar blahg 
   who asd laeta Foo bar blahg who asd laeta Foo bar blahg who asd laeta</p>
 
-<div id="projects">
+<div id="workExperience">
 
 <!-- Home Post List -->
 {% for post in site.posts limit : 5 %}
@@ -43,24 +46,40 @@ background: '/media/ue5_b.jpg'
 
 </div>
 
-<div id="otherInfo">
+<!-- TODO: Make my work experience in little tiles that react when you hover over them -->
 
-<h1>Personal Projects</h1>
-
-{% for item in site.data.personalProjects %}
-  <div id="projectInfo">
-    <h2 id="projectTitle">{{ item.title }} {% if item.tools %}<span id="tools">({{ item.tools}})</span> {% endif %}</h2>
-
-    <img id="projectBanner" src={{ item.image }} />
-
-    <p>{{ item.description }}</p>
-    <div id="projectLinks" style="text-align: center;">
-    {% for link in item.links %}
-      <a href={{ link.value }} target="_blank">{{ link.name }}</a>{% if link != item.links.last %}  |  {% endif %}
-    {% endfor %}
-      </div>
-  </div> <!-- End Project Info -->
-{% endfor %}  <!-- end other stuff -->
-
-
-</div>  <!--  End other stuff about me-->
+<div id="PersonalProjects">
+<h2>Personal Projects</h2>
+  <!-- Home Post List -->
+  {% for post in site.posts limit : 5 %}
+    <!-- Only show things from the PersonalProjects subfolder in _posts -->
+    {% if post.path contains 'PersonalProjects' %}
+  
+    <article class="post-preview">
+      <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+        <h3 class="post-title">{{ post.title }}</h2>
+        {% if post.subtitle %}
+        <h4 class="post-subtitle">{{ post.subtitle }}</h3>
+        {% endif %}
+  
+        <!-- Show the image related to this position if there is one -->
+        {% if post.banner-image %}
+          <div id="bannerContainer">
+            <img id="projectBanner" src={{ post.banner-image }} />
+          </div>
+        {% endif %}
+  
+        <p>{{ post.excerpt | strip_html | truncatewords: 35 }}</p>
+      </a>
+      <!-- Show start/end dates of this position -->
+      <p class="post-meta">
+        {{ post.start-date | date: '%B %d, %Y' }} to {{ post.end-date | date: '%B %d, %Y'}}      
+      </p>
+      <p></p>
+    </article>
+  <hr>
+  
+    {% endif %}
+  {% endfor %}
+  
+  </div>
