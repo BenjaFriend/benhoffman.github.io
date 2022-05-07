@@ -1,0 +1,17 @@
+---
+layout: page
+title: Gameography
+background: '/media/lyra_blue_areana.jpg'
+---
+
+
+<div id="posts">
+  <ul>
+    {% for member in site.data.gameography %}
+
+    <li class="game-list"><h4><a href="{{ member.link }}" target="_blank">{{ member.title }}</a></h4></li>
+
+    {% endfor %}
+
+  </ul>
+</div>
