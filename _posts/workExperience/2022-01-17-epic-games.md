@@ -1,6 +1,6 @@
 ---
 title: Epic Games, Inc.
-subtitle: Engine Programmer
+subtitle: Senior Engine Programmer
 start-date: 2020-01-14
 end-date: Current
 layout: post
