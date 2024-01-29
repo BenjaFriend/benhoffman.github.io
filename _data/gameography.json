@@ -1,11 +1,23 @@
 [
 	{
-		"title": "Lyra",
+		"title": "LEGO® Fortnite",
+		"link": "https://store.epicgames.com/en-US/p/fortnite--lego"
+	},
+	{
+		"title": "Fortnite Festival",
+		"link": "https://store.epicgames.com/en-US/p/fortnite--festival"
+	},
+	{
+		"title": "Rocket Racing",
+		"link": "https://store.epicgames.com/en-US/p/fortnite--rocket-racing"
+	},
+	{
+		"title": "Lyra (UE5 Sample Game)",
 		"link": "https://www.unrealengine.com/marketplace/en-US/product/lyra"
 	},
 	{
-		"title": "Fortnite",
-		"link": "https://www.epicgames.com/fortnite/en-US/home"
+		"title": "Fortnite Battle Royale",
+		"link": "https://store.epicgames.com/en-US/p/fortnite--battle-royale"
 	},
 	{
 		"title":"Aurum Kings",
